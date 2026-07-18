@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Friction Audit — Momentum</title>
+<meta name="description" content="A five-minute worksheet for finding what's actually stopping you from moving during the workday.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise-layer" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="frameworks.html" class="nav-active">Frameworks</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="science.html">The Science</a>
+      <a href="#" class="nav-shop" target="_blank" rel="noopener">Shop ↗</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="section detail-hero">
+    <div class="wrap">
+      <a href="frameworks.html" class="detail-back">← All frameworks</a>
+      <img src="icon-friction-audit.svg" alt="Magnifying glass illustration" class="detail-banner">
+      <p class="eyebrow">Framework 03</p>
+      <h1 class="detail-title">The Friction Audit</h1>
+      <p class="detail-sub">A five-minute worksheet for finding what's actually stopping you — then removing it, instead of trying to power through it with willpower.</p>
+
+      <div class="detail-body">
+        <h2>The problem it solves</h2>
+        <p>Willpower is a finite resource, and most sedentary days quietly drain it before 10am. Often the real obstacle isn't motivation — it's small, fixable friction: shoes across the room, no clear place to stretch, a calendar with zero white space. Fix the friction and the willpower problem often shrinks on its own.</p>
+
+        <h2>How it works</h2>
+        <ol>
+          <li>List the last three times you meant to move but didn't. Be specific about what happened right before you gave up on it.</li>
+          <li>For each one, name the exact physical or logistical obstacle — not "I was busy," but "my walking shoes are at home" or "I had back-to-back calls."</li>
+          <li>Pick the single easiest obstacle to remove this week. Move the shoes. Block ten minutes on the calendar. Put a sticky note on the monitor.</li>
+          <li>Re-check next week. Removing friction is ongoing maintenance, not a one-time fix.</li>
+        </ol>
+
+        <h2>Why it works</h2>
+        <p class="detail-science">Behavior-change research consistently identifies environmental cues and the reduction of friction as key factors in whether a repeated action becomes automatic — easier context, more consistent repetition. See the full picture in <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11641623/" target="_blank" rel="noopener">this systematic review of habit-formation research</a>.</p>
+      </div>
+
+      <div class="detail-cta">
+        <a href="framework-default-setting.html" class="btn btn-primary">Next: redesign your defaults →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="shop">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+      <p class="footer-tagline">"An object in motion stays in motion."</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <p class="footer-col-title">Platform</p>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="science.html">The Science</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Elsewhere</p>
+        <a href="#" target="_blank" rel="noopener">Our products ↗</a>
+        <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Momentum. Built for the eight hours you're sitting down.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

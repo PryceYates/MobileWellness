@@ -246,9 +246,11 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
 }
 .stat-label { font-size: 14px; color: var(--ink-soft); margin: 0 0 14px; line-height: 1.4; }
 .stat-source {
-  font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint);
+  display: block; font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint);
   margin: 0; padding-top: 12px; border-top: 1px solid var(--line);
+  text-decoration: none; transition: color 0.15s ease;
 }
+.stat-source:hover { color: var(--green); }
 
 /* ============================================
    PAGE HERO (subpages)
@@ -281,9 +283,13 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
 .card-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
 }
+.card-icon {
+  display: block; width: 100%; height: auto; border-radius: 10px; margin-bottom: 20px;
+  border: 1px solid var(--line);
+}
 .card {
   background: var(--white); border: 1px solid var(--line); border-radius: 14px;
-  padding: 32px 28px; display: flex; flex-direction: column;
+  padding: 20px 20px 28px; display: flex; flex-direction: column;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 .card:hover { border-color: var(--green); transform: translateY(-3px); }
@@ -295,6 +301,53 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
 .card-body { color: var(--ink-soft); font-size: 15px; margin: 0 0 20px; flex-grow: 1; }
 .card-link { font-weight: 600; font-size: 14px; color: var(--green); }
 .card-link:hover { color: var(--green-deep); }
+
+/* ============================================
+   DETAIL PAGES (frameworks & challenges)
+============================================ */
+.detail-hero { padding: 56px 0 0; }
+.detail-back {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px;
+  font-weight: 600; color: var(--ink-soft); margin-bottom: 28px;
+}
+.detail-back:hover { color: var(--green); }
+.detail-banner {
+  width: 100%; max-height: 260px; object-fit: cover; border-radius: 16px;
+  border: 1px solid var(--line); margin-bottom: 36px;
+}
+.detail-title { font-size: clamp(30px, 4vw, 44px); margin-bottom: 16px; max-width: 700px; }
+.detail-sub { font-size: 17px; color: var(--ink-soft); max-width: 620px; margin: 0 0 40px; }
+.detail-body { max-width: 680px; }
+.detail-body h2 {
+  font-size: 22px; margin: 40px 0 14px; font-weight: 600;
+}
+.detail-body p { color: var(--ink-soft); font-size: 16px; line-height: 1.65; margin: 0 0 16px; }
+.detail-body ol, .detail-body ul { color: var(--ink-soft); font-size: 16px; line-height: 1.7; padding-left: 22px; }
+.detail-body li { margin-bottom: 8px; }
+.detail-science {
+  margin-top: 12px; padding: 18px 22px; background: var(--green-pale);
+  border: 1px solid var(--green-soft); border-radius: 12px; font-size: 14.5px; color: var(--green-deep);
+}
+.detail-science a { color: var(--green-deep); text-decoration: underline; }
+.detail-cta { margin: 44px 0 0; }
+
+/* ============================================
+   CHALLENGE CADENCE CARDS
+============================================ */
+.cadence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.cadence-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+  overflow: hidden; display: flex; flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.cadence-card:hover { border-color: var(--green); transform: translateY(-3px); }
+.cadence-tag {
+  font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--white); background: var(--green); padding: 8px 20px;
+}
+.cadence-body { padding: 24px 24px 28px; display: flex; flex-direction: column; flex-grow: 1; }
+.cadence-body .card-title { font-size: 20px; }
+.cadence-body .card-body { margin-bottom: 22px; }
 
 /* ============================================
    CHALLENGES
@@ -373,7 +426,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
    RESPONSIVE
 ============================================ */
 @media (max-width: 860px) {
-  .card-grid, .resource-grid, .teaser-grid { grid-template-columns: 1fr; }
+  .card-grid, .resource-grid, .teaser-grid, .cadence-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .challenge { grid-template-columns: 1fr; text-align: left; }
   .challenge-status { justify-self: start; }

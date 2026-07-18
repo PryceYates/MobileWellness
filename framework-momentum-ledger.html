@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Momentum Ledger — Momentum</title>
+<meta name="description" content="A dead-simple visible tracker for making consistency obvious. What gets seen gets repeated.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise-layer" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="frameworks.html" class="nav-active">Frameworks</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="science.html">The Science</a>
+      <a href="#" class="nav-shop" target="_blank" rel="noopener">Shop ↗</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="section detail-hero">
+    <div class="wrap">
+      <a href="frameworks.html" class="detail-back">← All frameworks</a>
+      <img src="icon-momentum-ledger.svg" alt="Bar chart illustration" class="detail-banner">
+      <p class="eyebrow">Framework 06</p>
+      <h1 class="detail-title">The Momentum Ledger</h1>
+      <p class="detail-sub">A dead-simple visible tracker for making consistency obvious. What gets seen gets repeated.</p>
+
+      <div class="detail-body">
+        <h2>The problem it solves</h2>
+        <p>Consistency is hard to feel from the inside — most days feel roughly the same whether or not you're actually building something. A visible record fixes that: it turns an invisible pattern into something you can see accumulate, which changes how motivating it feels to keep going.</p>
+
+        <h2>How it works</h2>
+        <ol>
+          <li>Pick one visible tracking method — a paper calendar with X's, a shared spreadsheet, a sticky note grid. Analog is fine; the point is visibility, not sophistication.</li>
+          <li>Mark it the same day you complete the movement, not retroactively. Same-day marking keeps the record honest and the reward immediate.</li>
+          <li>Keep the tracker somewhere you'll actually see it unprompted — a monitor edge, not a buried app.</li>
+          <li>Don't reset to zero after a missed day. Note the gap and keep going; the ledger tracks the pattern, not a perfect streak.</li>
+        </ol>
+
+        <h2>Why it works</h2>
+        <p class="detail-science">Self-monitoring is one of the most consistently cited components across habit-formation research — seeing a behavior recorded appears to reinforce the context-behavior link that drives automaticity, on top of any motivational boost from watching a streak grow. More detail in <a href="https://www.tandfonline.com/doi/full/10.1080/08870446.2021.2003362" target="_blank" rel="noopener">this research agenda on habit-based interventions</a>.</p>
+      </div>
+
+      <div class="detail-cta">
+        <a href="frameworks.html" class="btn btn-primary">Back to all frameworks</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="shop">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+      <p class="footer-tagline">"An object in motion stays in motion."</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <p class="footer-col-title">Platform</p>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="science.html">The Science</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Elsewhere</p>
+        <a href="#" target="_blank" rel="noopener">Our products ↗</a>
+        <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Momentum. Built for the eight hours you're sitting down.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

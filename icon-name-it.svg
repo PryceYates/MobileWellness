@@ -1,0 +1,8 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#E7ECE0"/>
+  <circle cx="132" cy="90" r="26" fill="none" stroke="#3B6146" stroke-width="4"/>
+  <path d="M96 148c0-22 16-34 36-34s36 12 36 34" fill="none" stroke="#3B6146" stroke-width="4" stroke-linecap="round"/>
+  <rect x="196" y="68" width="88" height="34" rx="17" fill="#F5F3ED" stroke="#263F2B" stroke-width="3"/>
+  <text x="240" y="90" font-family="Fraunces, serif" font-style="italic" font-size="15" fill="#263F2B" text-anchor="middle">"I am..."</text>
+  <path d="M196 92l-14 8 6-16z" fill="#F5F3ED" stroke="#263F2B" stroke-width="3" stroke-linejoin="round"/>
+</svg>
