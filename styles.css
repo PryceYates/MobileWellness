@@ -91,6 +91,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
   transition: color 0.15s ease;
 }
 .main-nav a:hover { color: var(--green); }
+.main-nav a.nav-active { color: var(--green); font-weight: 600; }
 .nav-shop {
   color: var(--white) !important;
   background: var(--green);
@@ -141,7 +142,12 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
   margin-bottom: 24px;
 }
 .hero-sub {
-  font-size: 18px; color: var(--ink-soft); max-width: 560px; margin: 0 0 36px;
+  font-size: 18px; color: var(--ink-soft); max-width: 560px; margin: 0 0 20px;
+}
+.motto {
+  font-family: var(--font-display); font-style: italic; font-size: 17px;
+  color: var(--green-deep); margin: 0 0 32px; padding-left: 16px;
+  border-left: 2px solid var(--green-soft);
 }
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 
@@ -155,37 +161,57 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
 }
 .timeline-label-sub { color: var(--ink-faint); }
 
-.timeline { position: relative; padding: 0 0 56px; }
-.timeline-svg { width: 100%; height: 60px; display: block; }
-.timeline-track { stroke: var(--line); stroke-width: 2; }
-.timeline-track-fill {
-  stroke: var(--green); stroke-width: 2;
-  stroke-dasharray: 960; stroke-dashoffset: 960;
-  transition: stroke-dashoffset 1.6s cubic-bezier(0.65, 0, 0.35, 1);
+.timeline { position: relative; padding: 0 0 28px; }
+
+/* Track sits behind the stops row, positioned by explicit pixel math tied to
+   the fixed height of the time-label + gap above each dot, so it always
+   lands exactly at the dot's vertical center regardless of label length. */
+.timeline-track-wrap {
+  position: absolute;
+  top: 34px; /* stop-time height (14px) + margin-bottom (14px) + half dot (6px) */
+  left: 0; right: 0; height: 2px;
 }
-.timeline.in-view .timeline-track-fill { stroke-dashoffset: 0; }
+.timeline-track {
+  position: absolute; inset: 0;
+  background: var(--line);
+}
+.timeline-track-fill {
+  position: absolute; inset: 0;
+  background: var(--green);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 1.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.timeline.in-view .timeline-track-fill { transform: scaleX(1); }
 
 .timeline-stops {
-  list-style: none; margin: -80px 0 0; padding: 0; position: relative; height: 90px;
+  list-style: none; margin: 0; padding: 0; position: relative; z-index: 2;
+  display: flex; align-items: flex-start; justify-content: space-between;
 }
 .timeline-stops li {
-  position: absolute; left: var(--pos); top: 0;
-  transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center;
-  width: 108px; text-align: center;
+  text-align: center; flex: 1; min-width: 0; padding: 0 4px;
 }
 .stop-time {
+  display: block; height: 14px; line-height: 14px;
   font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint);
-  margin-bottom: 6px;
+  margin-bottom: 14px;
 }
 .stop-dot {
-  width: 10px; height: 10px; border-radius: 50%;
+  width: 12px; height: 12px; border-radius: 50%;
   background: var(--ink-faint); border: 2px solid var(--bg);
   box-shadow: 0 0 0 1px var(--line);
-  margin-bottom: 10px;
+  margin-bottom: 14px; flex-shrink: 0;
 }
-.stop-dot--reset { background: var(--green); box-shadow: 0 0 0 1px var(--green); }
-.stop-label { font-size: 12.5px; color: var(--ink-soft); line-height: 1.3; }
+.stop-dot--brief { background: var(--green); box-shadow: 0 0 0 1px var(--green); }
+.stop-label { font-size: 12.5px; color: var(--ink-soft); line-height: 1.35; }
+.stop-label em { display: block; font-style: normal; color: var(--ink-faint); font-size: 11px; margin-top: 2px; }
+
+.timeline-callout {
+  margin: 28px 0 0; padding: 18px 22px;
+  background: var(--green-pale); border: 1px solid var(--green-soft);
+  border-radius: 12px; font-size: 14.5px; color: var(--green-deep);
+}
+.timeline-callout strong { color: var(--green-deep); }
 
 /* ============================================
    SECTIONS (shared)
@@ -202,6 +228,52 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
   letter-spacing: -0.01em; margin-bottom: 16px;
 }
 .section-desc { color: var(--ink-soft); font-size: 16px; margin: 0; }
+
+/* ============================================
+   STATS SECTION
+============================================ */
+.stats-section { padding-bottom: 64px; }
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+}
+.stat-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+  padding: 28px 24px;
+}
+.stat-number {
+  font-family: var(--font-display); font-size: 40px; font-weight: 600;
+  color: var(--green-deep); margin: 0 0 12px; line-height: 1;
+}
+.stat-label { font-size: 14px; color: var(--ink-soft); margin: 0 0 14px; line-height: 1.4; }
+.stat-source {
+  font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint);
+  margin: 0; padding-top: 12px; border-top: 1px solid var(--line);
+}
+
+/* ============================================
+   PAGE HERO (subpages)
+============================================ */
+.page-hero { padding: 72px 0 56px; border-bottom: 1px solid var(--line); }
+.page-hero-title {
+  font-size: clamp(32px, 4.4vw, 48px); font-weight: 600;
+  letter-spacing: -0.01em; margin: 14px 0 18px; max-width: 640px;
+}
+.page-hero-sub { font-size: 17px; color: var(--ink-soft); max-width: 600px; margin: 0; }
+
+.section-note {
+  margin: 40px 0 0; padding-top: 24px; border-top: 1px solid var(--line);
+  font-size: 14px; color: var(--ink-faint); font-style: italic;
+}
+
+/* ============================================
+   TEASER GRID (homepage)
+============================================ */
+.teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.teaser-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+  padding: 32px 28px; transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.teaser-card:hover { border-color: var(--green); transform: translateY(-3px); }
 
 /* ============================================
    CARDS — frameworks
@@ -301,14 +373,17 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
    RESPONSIVE
 ============================================ */
 @media (max-width: 860px) {
-  .card-grid, .resource-grid { grid-template-columns: 1fr; }
+  .card-grid, .resource-grid, .teaser-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .challenge { grid-template-columns: 1fr; text-align: left; }
   .challenge-status { justify-self: start; }
-  .timeline-stops { display: none; }
-  .timeline-section::after {
-    content: "9:00 → stand for a call → walking lunch → stretch reset → stairs → 5:00";
-    display: block; font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-soft);
-  }
+  .timeline-track-wrap { display: none; }
+  .timeline-stops { flex-direction: column; gap: 18px; align-items: flex-start; }
+  .timeline-stops li { flex-direction: row; align-items: center; text-align: left; gap: 12px; width: 100%; }
+  .stop-time { margin-bottom: 0; width: 44px; flex-shrink: 0; }
+  .stop-dot { margin-bottom: 0; }
+  .stop-label { text-align: left; }
+  .stop-label em { display: inline; margin-top: 0; margin-left: 4px; }
 }
 
 @media (max-width: 720px) {
@@ -324,4 +399,5 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
   .nav-toggle { display: flex; }
   .cta-form { flex-direction: column; }
   .footer-links { gap: 32px; }
+  .stats-grid { grid-template-columns: 1fr; }
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reset — Movement frameworks for sedentary workdays</title>
+<title>Momentum — Movement frameworks for sedentary workdays</title>
 <meta name="description" content="Frameworks, challenges, and resources to help people in sedentary jobs build movement back into how they already work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,13 @@
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="#top" class="logo">Reset<span class="logo-dot">.</span></a>
+    <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
     <nav class="main-nav" id="main-nav">
-      <a href="#frameworks">Frameworks</a>
-      <a href="#challenges">Challenges</a>
-      <a href="#resources">Resources</a>
-      <a href="#shop" class="nav-shop">Shop ↗</a>
+      <a href="index.html" class="nav-active">Home</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="resources.html">Resources</a>
+      <a href="#" class="nav-shop" target="_blank" rel="noopener">Shop ↗</a>
     </nav>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -36,10 +37,45 @@
     <div class="wrap hero-inner">
       <p class="eyebrow">For people who sit for a living</p>
       <h1 class="hero-headline">The workday wasn't<br>designed for your body.</h1>
-      <p class="hero-sub">Reset is a small library of frameworks, team challenges, and resources built for people in sedentary jobs — practical enough to run between meetings, no gym required.</p>
+      <p class="hero-sub">Momentum is a small library of frameworks, team challenges, and resources built for people in sedentary jobs — practical enough to run between meetings, no gym required.</p>
+      <p class="motto">"An object in motion stays in motion."</p>
       <div class="hero-ctas">
-        <a href="#challenges" class="btn btn-primary">See this week's challenge</a>
-        <a href="#frameworks" class="btn btn-ghost">Browse the frameworks</a>
+        <a href="challenges.html" class="btn btn-primary">See this week's challenge</a>
+        <a href="frameworks.html" class="btn btn-ghost">Browse the frameworks</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS: WHY THIS MATTERS -->
+  <section class="section stats-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Why this matters</p>
+        <h2 class="section-title">Sitting is the default now — the research is catching up</h2>
+        <p class="section-desc">None of this is about willpower. It's about how much of the average workday quietly happens without moving at all.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p class="stat-number">44.9%</p>
+          <p class="stat-label">of the average workday is now spent sitting, across all U.S. occupations.</p>
+          <p class="stat-source">U.S. Bureau of Labor Statistics, 2025</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">97.1%</p>
+          <p class="stat-label">of the workday for desk-heavy roles like software development is spent seated.</p>
+          <p class="stat-source">U.S. Bureau of Labor Statistics, 2025</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">29%</p>
+          <p class="stat-label">higher cardiovascular disease risk is linked to high daily sitting time, independent of exercise.</p>
+          <p class="stat-source">Meta-analysis, 448,285 participants — Amer. Journal of Preventive Medicine</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">17%</p>
+          <p class="stat-label">higher risk of early death is tied to prolonged sitting — even for people who exercise regularly.</p>
+          <p class="stat-source">UK expert guidance, British Journal of Sports Medicine</p>
+        </div>
       </div>
     </div>
   </section>
@@ -47,127 +83,54 @@
   <!-- SIGNATURE: WORKDAY TIMELINE -->
   <section class="timeline-section">
     <div class="wrap">
-      <p class="timeline-label">A typical day, reset <span class="timeline-label-sub">— six small interruptions to eight sitting hours</span></p>
+      <p class="timeline-label">A regular day, unchanged <span class="timeline-label-sub">— roughly nine hours, four minutes of it interrupted</span></p>
       <div class="timeline" id="timeline">
-        <svg viewBox="0 0 1000 140" class="timeline-svg" preserveAspectRatio="none" aria-hidden="true">
-          <line x1="20" y1="70" x2="980" y2="70" class="timeline-track"/>
-          <line x1="20" y1="70" x2="980" y2="70" class="timeline-track-fill" id="timeline-fill"/>
-        </svg>
+        <div class="timeline-track-wrap">
+          <div class="timeline-track"></div>
+          <div class="timeline-track-fill" id="timeline-fill"></div>
+        </div>
         <ol class="timeline-stops">
-          <li style="--pos:2%"><span class="stop-time">9:00</span><span class="stop-dot"></span><span class="stop-label">Arrive, sit down</span></li>
-          <li style="--pos:19%"><span class="stop-time">10:30</span><span class="stop-dot stop-dot--reset"></span><span class="stop-label">Stand for one call</span></li>
-          <li style="--pos:38%"><span class="stop-time">12:00</span><span class="stop-dot stop-dot--reset"></span><span class="stop-label">Walking lunch, 15 min</span></li>
-          <li style="--pos:57%"><span class="stop-time">2:00</span><span class="stop-dot stop-dot--reset"></span><span class="stop-label">Two-minute stretch reset</span></li>
-          <li style="--pos:76%"><span class="stop-time">3:30</span><span class="stop-dot stop-dot--reset"></span><span class="stop-label">Stairs, twice</span></li>
-          <li style="--pos:97%"><span class="stop-time">5:00</span><span class="stop-dot"></span><span class="stop-label">Close the laptop</span></li>
+          <li><span class="stop-time">8:45</span><span class="stop-dot"></span><span class="stop-label">Arrive, sit down</span></li>
+          <li><span class="stop-time">10:15</span><span class="stop-dot stop-dot--brief"></span><span class="stop-label">Bathroom break<br><em>~2 min</em></span></li>
+          <li><span class="stop-time">12:00</span><span class="stop-dot stop-dot--brief"></span><span class="stop-label">Lunch, mostly seated<br><em>still sitting</em></span></li>
+          <li><span class="stop-time">1:30</span><span class="stop-dot"></span><span class="stop-label">Snack, at the desk<br><em>still sitting</em></span></li>
+          <li><span class="stop-time">3:15</span><span class="stop-dot stop-dot--brief"></span><span class="stop-label">Bathroom break<br><em>~2 min</em></span></li>
+          <li><span class="stop-time">5:30</span><span class="stop-dot"></span><span class="stop-label">Drive home, sit again</span></li>
         </ol>
       </div>
+      <p class="timeline-callout">Two bathroom breaks. A lunch and a snack, both seated. That's the whole day — about <strong>4 minutes</strong> of it not sitting down.</p>
     </div>
   </section>
 
-  <!-- FRAMEWORKS -->
-  <section id="frameworks" class="section">
+  <!-- TEASER: FRAMEWORKS / CHALLENGES / RESOURCES -->
+  <section id="frameworks" class="section section-alt">
     <div class="wrap">
       <div class="section-head">
-        <p class="section-eyebrow">01 — Frameworks</p>
-        <h2 class="section-title">Ways of thinking, not just to-do lists</h2>
-        <p class="section-desc">Each framework targets a different piece of why movement doesn't happen on its own during a workday — friction, identity, or cueing. Start with whichever one describes your actual problem.</p>
+        <p class="section-eyebrow">Where to start</p>
+        <h2 class="section-title">Three ways in</h2>
+        <p class="section-desc">Pick whichever matches what you actually need right now.</p>
       </div>
 
-      <div class="card-grid">
-        <article class="card">
+      <div class="teaser-grid">
+        <article class="teaser-card">
           <p class="card-index">01</p>
-          <h3 class="card-title">The Two-Minute Reset</h3>
-          <p class="card-body">Attach sixty to ninety seconds of movement to something you already do every day — every call that ends, stand up before opening the next tab. The habit rides on a cue you don't have to remember.</p>
-          <a href="#" class="card-link">Read the framework →</a>
+          <h3 class="card-title">Frameworks</h3>
+          <p class="card-body">Ways of thinking about friction, identity, and cueing — for building movement back into a day that wasn't designed for it.</p>
+          <a href="frameworks.html" class="card-link">Browse frameworks →</a>
         </article>
 
-        <article class="card">
+        <article class="teaser-card">
           <p class="card-index">02</p>
-          <h3 class="card-title">Name It to Become It</h3>
-          <p class="card-body">A short daily practice for describing yourself as someone who moves, before it's fully true. Identity tends to follow repetition — this gives the language a head start.</p>
-          <a href="#" class="card-link">Read the framework →</a>
+          <h3 class="card-title">Challenges</h3>
+          <p class="card-body">Team-based, not leaderboard-based. Run these with coworkers — the goal is shared momentum, not a ranking.</p>
+          <a href="challenges.html" class="card-link">See this week's challenge →</a>
         </article>
 
-        <article class="card">
+        <article class="teaser-card">
           <p class="card-index">03</p>
-          <h3 class="card-title">The Friction Audit</h3>
-          <p class="card-body">A five-minute worksheet for finding what's actually stopping you — shoes in the wrong place, a water bottle across the room, no clear first step. Remove the friction before adding more willpower.</p>
-          <a href="#" class="card-link">Read the framework →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CHALLENGES -->
-  <section id="challenges" class="section section-alt">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="section-eyebrow">02 — Challenges</p>
-        <h2 class="section-title">Built for teams, not leaderboards</h2>
-        <p class="section-desc">Run these with coworkers. Each one is scored as a shared total, not a individual ranking — the goal is momentum you build together, not a winner and everyone else.</p>
-      </div>
-
-      <div class="challenge-list">
-        <article class="challenge">
-          <div class="challenge-status challenge-status--live">Live now</div>
-          <div class="challenge-main">
-            <h3 class="card-title">30-Day Standing Streak</h3>
-            <p class="card-body">Every team member logs one stretch of thirty-plus minutes standing or moving, once a day, for a month. The team total climbs together — no individual leaderboard.</p>
-          </div>
-          <a href="#" class="btn btn-small">Join the streak</a>
-        </article>
-
-        <article class="challenge">
-          <div class="challenge-status">Starts monthly</div>
-          <div class="challenge-main">
-            <h3 class="card-title">Walking Meeting Week</h3>
-            <p class="card-body">One week. Swap one meeting a day — the kind that doesn't need a screen — for a walk. Small enough to actually finish, structured enough to notice.</p>
-          </div>
-          <a href="#" class="btn btn-small">Get the guide</a>
-        </article>
-
-        <article class="challenge">
-          <div class="challenge-status">Ongoing</div>
-          <div class="challenge-main">
-            <h3 class="card-title">Stairs Over Elevator</h3>
-            <p class="card-body">A standing office tally, not a competition against each other — every flight your team takes together adds to one shared count for the quarter.</p>
-          </div>
-          <a href="#" class="btn btn-small">See the tally</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESOURCES -->
-  <section id="resources" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="section-eyebrow">03 — Resources</p>
-        <h2 class="section-title">The longer read, when you want it</h2>
-        <p class="section-desc">Short explainers on the research behind the frameworks — for the days you have ten minutes instead of two.</p>
-      </div>
-
-      <div class="resource-grid">
-        <article class="resource">
-          <p class="resource-tag">Behavior science</p>
-          <h3 class="card-title">Why your brain treats sitting as the default</h3>
-          <p class="card-body">The path of least resistance isn't laziness — it's design. What "friction" actually means in a workday, and where yours is hiding.</p>
-          <a href="#" class="card-link">Read more →</a>
-        </article>
-
-        <article class="resource">
-          <p class="resource-tag">Habit formation</p>
-          <h3 class="card-title">The science behind small resets</h3>
-          <p class="card-body">How a ninety-second habit becomes automatic — and why the size of the action matters less than how consistently it's cued.</p>
-          <a href="#" class="card-link">Read more →</a>
-        </article>
-
-        <article class="resource">
-          <p class="resource-tag">Workplace wellness</p>
-          <h3 class="card-title">What actually works, and what doesn't</h3>
-          <p class="card-body">A plain look at the evidence on workplace wellness programs — where they help, where they fall short, and what that means for a small team.</p>
-          <a href="#" class="card-link">Read more →</a>
+          <h3 class="card-title">Resources</h3>
+          <p class="card-body">The research behind the frameworks, written in plain language — for the days you have ten minutes instead of two.</p>
+          <a href="resources.html" class="card-link">Read the research →</a>
         </article>
       </div>
     </div>
@@ -192,15 +155,15 @@
 <footer class="site-footer" id="shop">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <a href="#top" class="logo">Reset<span class="logo-dot">.</span></a>
-      <p class="footer-tagline">Frameworks and resources for sedentary workdays.</p>
+      <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+      <p class="footer-tagline">"An object in motion stays in motion."</p>
     </div>
     <div class="footer-links">
       <div class="footer-col">
         <p class="footer-col-title">Platform</p>
-        <a href="#frameworks">Frameworks</a>
-        <a href="#challenges">Challenges</a>
-        <a href="#resources">Resources</a>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="resources.html">Resources</a>
       </div>
       <div class="footer-col">
         <p class="footer-col-title">Elsewhere</p>
@@ -211,7 +174,7 @@
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>© <span id="year"></span> Reset. Built for the eight hours you're sitting down.</p>
+    <p>© <span id="year"></span> Momentum. Built for the eight hours you're sitting down.</p>
   </div>
 </footer>
 

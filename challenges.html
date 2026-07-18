@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Challenges — Momentum</title>
+<meta name="description" content="Team-based movement challenges for sedentary workdays — built for shared momentum, not leaderboards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise-layer" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="challenges.html" class="nav-active">Challenges</a>
+      <a href="resources.html">Resources</a>
+      <a href="#" class="nav-shop" target="_blank" rel="noopener">Shop ↗</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">02 — Challenges</p>
+      <h1 class="page-hero-title">Built for teams, not leaderboards</h1>
+      <p class="page-hero-sub">Run these with coworkers. Each one is scored as a shared total, not an individual ranking — the goal is momentum you build together, not a winner and everyone else.</p>
+    </div>
+  </section>
+
+  <!-- CHALLENGES LIST -->
+  <section class="section">
+    <div class="wrap">
+      <div class="challenge-list">
+        <article class="challenge">
+          <div class="challenge-status challenge-status--live">Live now</div>
+          <div class="challenge-main">
+            <h3 class="card-title">30-Day Standing Streak</h3>
+            <p class="card-body">Every team member logs one stretch of thirty-plus minutes standing or moving, once a day, for a month. The team total climbs together — no individual leaderboard.</p>
+          </div>
+          <a href="#" class="btn btn-small">Join the streak</a>
+        </article>
+
+        <article class="challenge">
+          <div class="challenge-status">Starts monthly</div>
+          <div class="challenge-main">
+            <h3 class="card-title">Walking Meeting Week</h3>
+            <p class="card-body">One week. Swap one meeting a day — the kind that doesn't need a screen — for a walk. Small enough to actually finish, structured enough to notice.</p>
+          </div>
+          <a href="#" class="btn btn-small">Get the guide</a>
+        </article>
+
+        <article class="challenge">
+          <div class="challenge-status">Ongoing</div>
+          <div class="challenge-main">
+            <h3 class="card-title">Stairs Over Elevator</h3>
+            <p class="card-body">A standing office tally, not a competition against each other — every flight your team takes together adds to one shared count for the quarter.</p>
+          </div>
+          <a href="#" class="btn btn-small">See the tally</a>
+        </article>
+      </div>
+
+      <p class="section-note">New challenges rotate in monthly — check back, or sign up on the home page to get them by email.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="shop">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+      <p class="footer-tagline">"An object in motion stays in motion."</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <p class="footer-col-title">Platform</p>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Elsewhere</p>
+        <a href="#" target="_blank" rel="noopener">Our products ↗</a>
+        <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Momentum. Built for the eight hours you're sitting down.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
