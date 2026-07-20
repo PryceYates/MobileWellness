@@ -3,6 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momentum: Movement frameworks for sedentary workdays</title>
+<meta name="description" content="Frameworks, challenges, and resources to help people in sedentary jobs build movement back into how they already work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise-layer" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html" class="nav-active">Home</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="science.html">The Science</a>
+      <a href="#" class="nav-shop" target="_blank" rel="noopener">Shop ↗</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">For people who sit for a living</p>
+      <h1 class="hero-headline">The workday wasn't<br>designed for your body.</h1>
+      <p class="hero-sub">Momentum is a small library of frameworks, team challenges, and resources built for people in sedentary jobs, practical enough to run between meetings or during work calls.</p>
+      <p class="motto">"An object in motion stays in motion."</p>
+      <div class="hero-ctas">
+        <a href="challenges.html" class="btn btn-primary">See this week's challenge</a>
+        <a href="frameworks.html" class="btn btn-ghost">Browse the frameworks</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS: WHY THIS MATTERS -->
+  <section class="section stats-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Why this matters</p>
+        <h2 class="section-title">Sitting is the default now: the research is catching up</h2>
+        <p class="section-desc">None of this is about willpower. It's about how much of the average workday quietly happens without moving at all.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p class="stat-number">44.9%</p>
+          <p class="stat-label">of the average workday is now spent <strong>sitting</strong>, across all U.S. occupations.</p>
+          <a href="https://www.bls.gov/opub/ted/2026/on-average-workers-spent-44-9-percent-of-the-workday-sitting-in-2025.htm" class="stat-source" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics, 2025 ↗</a>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">97.1%</p>
+          <p class="stat-label">of the workday for desk-heavy roles like software development is spent <strong>seated</strong>.</p>
+          <a href="https://www.bls.gov/opub/ted/2026/on-average-workers-spent-44-9-percent-of-the-workday-sitting-in-2025.htm" class="stat-source" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics, 2025 ↗</a>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">29%</p>
+          <p class="stat-label">higher <strong>cardiovascular disease risk</strong> is linked to high daily sitting time, independent of exercise.</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/31377090/" class="stat-source" target="_blank" rel="noopener">Amer. Journal of Preventive Medicine ↗</a>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">17%</p>
+          <p class="stat-label">higher risk of <strong>early death</strong> is tied to prolonged sitting, even for people who exercise regularly.</p>
+          <a href="https://www.cbsnews.com/sanfrancisco/news/office-workers-should-stand-for-2-hours-a-day-panel-says/" class="stat-source" target="_blank" rel="noopener">British Journal of Sports Medicine guidance ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE: WORKDAY TIMELINE -->
+  <section class="timeline-section">
+    <div class="wrap">
+      <p class="section-eyebrow">What a sedentary day actually looks like</p>
+      <p class="timeline-label">A regular day for the average American worker <span class="timeline-label-sub">: roughly nine hours at a desk, four minutes of it not sitting down</span></p>
+      <div class="timeline" id="timeline">
+        <div class="timeline-track-wrap">
+          <div class="timeline-track"></div>
+          <div class="timeline-track-fill" id="timeline-fill"></div>
+        </div>
+        <ol class="timeline-stops">
+          <li><span class="stop-time">8:45</span><span class="stop-dot"></span><span class="stop-label">Arrive, sit down</span></li>
+          <li><span class="stop-time">10:15</span><span class="stop-dot stop-dot--brief"></span><span class="stop-label">Bathroom break<br><em>~2 min</em></span></li>
+          <li><span class="stop-time">12:00</span><span class="stop-dot stop-dot--brief"></span><span class="stop-label">Lunch, mostly seated<br><em>still sitting</em></span></li>
+          <li><span class="stop-time">1:30</span><span class="stop-dot"></span><span class="stop-label">Snack, at the desk<br><em>still sitting</em></span></li>
+          <li><span class="stop-time">3:15</span><span class="stop-dot stop-dot--brief"></span><span class="stop-label">Bathroom break<br><em>~2 min</em></span></li>
+          <li><span class="stop-time">5:30</span><span class="stop-dot"></span><span class="stop-label">Drive home, sit again</span></li>
+        </ol>
+      </div>
+      <p class="timeline-callout">This isn't a worst-case day, it's an <strong>ordinary</strong> one. Two bathroom breaks. A lunch and a snack, both seated. That's roughly what a typical American desk job looks like, and it adds up to about <strong>4 minutes</strong> of the day spent not sitting down.</p>
+    </div>
+  </section>
+
+  <!-- TEASER: FRAMEWORKS / CHALLENGES / RESOURCES -->
+  <section id="frameworks" class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Where to start</p>
+        <h2 class="section-title">Three ways in</h2>
+        <p class="section-desc">Pick whichever matches what you actually need right now.</p>
+      </div>
+
+      <div class="teaser-grid">
+        <article class="teaser-card">
+          <p class="card-index">01</p>
+          <h3 class="card-title">Frameworks</h3>
+          <p class="card-body">Ways of thinking about friction, identity, and cueing, for building movement back into a day that wasn't designed for it.</p>
+          <a href="frameworks.html" class="card-link">Browse frameworks →</a>
+        </article>
+
+        <article class="teaser-card">
+          <p class="card-index">02</p>
+          <h3 class="card-title">Challenges</h3>
+          <p class="card-body">Team-based, not leaderboard-based. Run these with coworkers: the goal is shared momentum, not a ranking.</p>
+          <a href="challenges.html" class="card-link">See this week's challenge →</a>
+        </article>
+
+        <article class="teaser-card">
+          <p class="card-index">03</p>
+          <h3 class="card-title">The Science</h3>
+          <p class="card-body">The research behind the frameworks, with links to the original studies, for the days you have ten minutes instead of two.</p>
+          <a href="science.html" class="card-link">Read the research →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / EMAIL -->
+  <section class="section section-cta">
+    <div class="wrap cta-inner">
+      <h2 class="cta-title">One reset a week, sent to your inbox.</h2>
+      <p class="cta-desc">A short framework or challenge, every Monday. No spam, unsubscribe anytime.</p>
+      <form class="cta-form" id="cta-form">
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" id="email" placeholder="you@company.com" required>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+      </form>
+      <p class="cta-note" id="cta-note" role="status"></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="shop">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+      <p class="footer-tagline">"An object in motion stays in motion."</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <p class="footer-col-title">Platform</p>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="science.html">The Science</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Elsewhere</p>
+        <a href="#" target="_blank" rel="noopener">Our products ↗</a>
+        <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Momentum. Built for the eight hours you're sitting down.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Momentum — Movement frameworks for sedentary workdays</title>
 <meta name="description" content="Frameworks, challenges, and resources to help people in sedentary jobs build movement back into how they already work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
