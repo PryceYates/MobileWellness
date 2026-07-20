@@ -36,8 +36,40 @@
   <section class="page-hero">
     <div class="wrap">
       <p class="eyebrow">Challenges</p>
-      <h1 class="page-hero-title">Built for teams, not leaderboards</h1>
-      <p class="page-hero-sub">One challenge for each pace: something to do today, something to run this week, and something to build over the month. Run them with coworkers — every one is scored as a shared total, not an individual ranking.</p>
+      <h1 class="page-hero-title">Your team vs. their team</h1>
+      <p class="page-hero-sub">One challenge for each pace: something to do today, something to run this week, and something to build over the month. Run them as teams — Marketing, Sales, Engineering, whoever you've got — and compete on your team's <strong>average</strong> score, so a 6-person team goes up against a 20-person team on equal footing.</p>
+    </div>
+  </section>
+
+  <!-- HOW TEAM SCORING WORKS -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">How the scoring works</p>
+        <h2 class="section-title">Every challenge scores the same way</h2>
+        <p class="section-desc">Whichever challenge you're running, the mechanic underneath is identical — and it's designed so team size never decides the winner.</p>
+      </div>
+
+      <ol class="scoring-steps">
+        <li>Everyone logs their own activity under their team name — Marketing, Sales, Engineering, Ops, whatever teams you're running.</li>
+        <li>Each team's score is the <strong>average across everyone on that team who participated</strong> — not a raw total. That's what keeps a 6-person team and a 20-person team on equal footing.</li>
+        <li>Teams compare averages against each other for the length of the challenge. Whoever's chasing the highest team average has something to talk about at the next all-hands.</li>
+      </ol>
+
+      <div class="standings-table-wrap">
+        <p class="standings-label">Example — what standings might look like mid-challenge</p>
+        <table class="standings-table">
+          <thead>
+            <tr><th>Team</th><th>Members participating</th><th>Team average</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Engineering</td><td>19</td><td><strong>91%</strong></td></tr>
+            <tr><td>Marketing</td><td>6</td><td>82%</td></tr>
+            <tr><td>Sales</td><td>11</td><td>76%</td></tr>
+            <tr><td>Operations</td><td>8</td><td>68%</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -46,16 +78,16 @@
     <div class="wrap">
       <div class="cadence-grid">
         <article class="cadence-card">
-          <p class="cadence-tag">Daily</p>
+          <p class="cadence-tag" data-challenge-tag="daily">Daily</p>
           <div class="cadence-body">
             <h3 class="card-title">The Two-Minute Trigger</h3>
-            <p class="card-body">Pick one recurring cue today — a call ending, a meeting starting — and move for two minutes every time it happens. Log it in the team channel as you go.</p>
+            <p class="card-body">Pick one recurring cue today — a call ending, a meeting starting — and move for two minutes every time it happens. Log it under your team as you go.</p>
             <a href="challenge-daily.html" class="btn btn-small">Start today's challenge</a>
           </div>
         </article>
 
         <article class="cadence-card">
-          <p class="cadence-tag">Weekly</p>
+          <p class="cadence-tag" data-challenge-tag="weekly">Weekly</p>
           <div class="cadence-body">
             <h3 class="card-title">Walking Meeting Week</h3>
             <p class="card-body">Swap one meeting a day — the kind that doesn't need a screen — for a walk. Small enough to actually finish, structured enough to notice.</p>
@@ -64,10 +96,10 @@
         </article>
 
         <article class="cadence-card">
-          <p class="cadence-tag">Monthly</p>
+          <p class="cadence-tag" data-challenge-tag="monthly">Monthly</p>
           <div class="cadence-body">
             <h3 class="card-title">30-Day Standing Streak</h3>
-            <p class="card-body">Every team member logs one stretch of thirty-plus minutes standing or moving, once a day, for a month. The team total climbs together.</p>
+            <p class="card-body">Every team member logs one stretch of thirty-plus minutes standing or moving, once a day, for a month. Your team's average climbs day by day.</p>
             <a href="challenge-monthly.html" class="btn btn-small">Join the streak</a>
           </div>
         </article>

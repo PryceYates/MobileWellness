@@ -47,5 +47,17 @@ if (ctaForm) {
   });
 }
 
+// Dynamic challenge date labels (today's date / this week / this month)
+document.querySelectorAll('[data-challenge-tag="daily"]').forEach(el => {
+  const today = new Date();
+  el.textContent = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) + ' Challenge';
+});
+document.querySelectorAll('[data-challenge-tag="weekly"]').forEach(el => {
+  el.textContent = "This Week's Challenge";
+});
+document.querySelectorAll('[data-challenge-tag="monthly"]').forEach(el => {
+  el.textContent = "This Month's Challenge";
+});
+
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
