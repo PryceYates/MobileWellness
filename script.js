@@ -41,7 +41,7 @@ if (ctaForm) {
     e.preventDefault();
     const email = document.getElementById('email').value.trim();
     if (email) {
-      ctaNote.textContent = "You're on the list — first reset lands Monday.";
+      ctaNote.textContent = "You're on the list, first reset lands Monday.";
       ctaForm.reset();
     }
   });
@@ -56,7 +56,8 @@ document.querySelectorAll('[data-challenge-tag="weekly"]').forEach(el => {
   el.textContent = "This Week's Challenge";
 });
 document.querySelectorAll('[data-challenge-tag="monthly"]').forEach(el => {
-  el.textContent = today.toLocaleDateString('en-US', { month: 'long'}) + ' Challenge';
+  const today = new Date();
+  el.textContent = today.toLocaleDateString('en-US', { month: 'long' }) + ' Challenge';
 });
 
 // ============================================
@@ -72,44 +73,44 @@ const DAILY_CHALLENGES = [
     title: 'The Two-Minute Trigger',
     lead: "Pick one recurring cue today, and move for two minutes every single time it happens. Simple enough to start in the next five minutes.",
     steps: [
-      "Agree on one shared cue for the day — every call that ends, every hour on the hour, every time someone posts in the team channel.",
+      "Agree on one shared cue for the day: every call that ends, every hour on the hour, every time someone posts in the team channel.",
       "Whenever the cue happens, stand up and move for at least two minutes. Stretch, walk the hallway, whatever's available.",
-      "Log each one under your team — Marketing, Sales, Engineering, whichever team you're on.",
-      "Your team's score for the day is the average number of triggers hit per person — so team size doesn't decide the outcome. Compare your team's average against the other teams running the challenge today."
+      "Log each one under your team: Marketing, Sales, Engineering, whichever team you're on.",
+      "Your team's score for the day is the average number of triggers hit per person, so team size doesn't decide the outcome. Compare your team's average against the other teams running the challenge today."
     ],
-    framework: { href: 'framework-two-minute-reset.html', label: 'the Two-Minute Reset framework' }
+    framework: { href: 'framework-two-minute-reset.html', label: 'the Elite Habits framework' }
   },
   {
     id: 'stair-case',
     title: 'The Stair Case',
-    lead: "No elevator today. Every single time you'd normally take it, take the stairs instead — and log it under your team.",
+    lead: "No elevator today. Every single time you'd normally take it, take the stairs instead, and log it under your team.",
     steps: [
       "For the whole day, treat the elevator as off-limits. Stairs only, every trip, no exceptions you don't have to make.",
-      "Keep a rough tally as you go — a note on your phone works fine.",
-      "Log your day's total under your team — Marketing, Sales, Engineering, whichever team you're on.",
-      "Your team's score is the average number of stair trips per person — so a bigger team isn't automatically ahead. Compare against the other teams running it today."
+      "Keep a rough tally as you go: a note on your phone works fine.",
+      "Log your day's total under your team: Marketing, Sales, Engineering, whichever team you're on.",
+      "Your team's score is the average number of stair trips per person, so a bigger team isn't automatically ahead. Compare against the other teams running it today."
     ],
     framework: { href: 'framework-friction-audit.html', label: 'the Friction Audit framework' }
   },
   {
     id: 'standing-call',
     title: 'The Standing Call',
-    lead: "Every call you take today — phone or video — take it standing up.",
+    lead: "Every call you take today, phone or video, take it standing up.",
     steps: [
       "Commit to standing for every call today, start to finish. Sitting back down when it ends is fine.",
       "If a call runs long, treat that as more standing time, not a reason to sit.",
       "Log how many calls you stood for under your team name.",
       "Your team's score is the average number of standing calls per person. Compare your team's average against everyone else running it today."
     ],
-    framework: { href: 'framework-default-setting.html', label: 'the Default Setting framework' }
+    framework: { href: 'framework-default-setting.html', label: 'the Default Settings framework' }
   },
   {
     id: 'walk-and-talk',
     title: 'Walk & Talk',
-    lead: "Turn at least one conversation today — a 1:1, a catch-up, a quick sync — into a walking conversation instead of a sit-down one.",
+    lead: "Turn at least one conversation today, a 1:1, a catch-up, a quick sync, into a walking conversation instead of a sit-down one.",
     steps: [
       "Pick one conversation on today's calendar that doesn't need a screen or notes.",
-      "Take it as a walk instead — with a coworker in person, or on the phone solo.",
+      "Take it as a walk instead: with a coworker in person, or on the phone solo.",
       "Log it under your team once it's done.",
       "Your team's score is the average number of walk-and-talks per person today. Compare against the other teams running the challenge."
     ],
@@ -120,7 +121,7 @@ const DAILY_CHALLENGES = [
     title: 'The Water Lap',
     lead: "Every time you refill water or coffee today, take the longest reasonable route there and back.",
     steps: [
-      "Every refill today, skip the closest option and walk to a farther one — a different floor's kitchen, the far end of the office, whatever adds a real lap.",
+      "Every refill today, skip the closest option and walk to a farther one: a different floor's kitchen, the far end of the office, whatever adds a real lap.",
       "Keep a rough count of how many laps you get in.",
       "Log your total under your team name.",
       "Your team's score is the average number of laps per person. Compare your team's average against the others running it today."
@@ -133,11 +134,11 @@ const DAILY_CHALLENGES = [
     lead: "One full-body stretch, three minutes, before lunch today. That's the whole challenge.",
     steps: [
       "Set a reminder for right before your usual lunch break.",
-      "When it goes off, take three full minutes for a full-body stretch — neck, shoulders, back, legs, whatever needs it.",
+      "When it goes off, take three full minutes for a full-body stretch: neck, shoulders, back, legs, whatever needs it.",
       "Log it under your team once it's done.",
       "Your team's score is the percentage of the team who completed theirs today. Compare against the other teams running it."
     ],
-    framework: { href: 'framework-two-minute-reset.html', label: 'the Two-Minute Reset framework' }
+    framework: { href: 'framework-two-minute-reset.html', label: 'the Elite Habits framework' }
   },
   {
     id: 'desk-break',
@@ -145,11 +146,11 @@ const DAILY_CHALLENGES = [
     lead: "Every 50 minutes today, stand up and move for 60 seconds before the next hour starts.",
     steps: [
       "Set a repeating timer for :50 past every hour during the workday.",
-      "When it goes off, stand and move for sixty seconds — stretch, pace, whatever's available — before sitting back down.",
+      "When it goes off, stand and move for sixty seconds, stretch, pace, whatever's available, before sitting back down.",
       "Log how many you hit under your team name.",
       "Your team's score is the average number of desk breaks per person today. Compare against the other teams running it."
     ],
-    framework: { href: 'framework-two-minute-reset.html', label: 'the Two-Minute Reset framework' }
+    framework: { href: 'framework-two-minute-reset.html', label: 'the Elite Habits framework' }
   }
 ];
 
@@ -193,7 +194,7 @@ if (dailyTitleEl) {
   const frameworkLink = document.getElementById('daily-framework-link');
   frameworkLink.href = c.framework.href;
   frameworkLink.textContent = c.framework.label;
-  document.title = c.title + ' — Momentum';
+  document.title = c.title + ': Momentum';
 }
 
 // Footer year
