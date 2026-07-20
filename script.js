@@ -56,7 +56,7 @@ document.querySelectorAll('[data-challenge-tag="weekly"]').forEach(el => {
   el.textContent = "This Week's Challenge";
 });
 document.querySelectorAll('[data-challenge-tag="monthly"]').forEach(el => {
-  el.textContent = "This Month's Challenge";
+  el.textContent = today.toLocaleDateString('en-US', { month: 'long'}) + ' Challenge';
 });
 
 // ============================================
