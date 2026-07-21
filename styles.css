@@ -288,6 +288,32 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
   display: block; width: 100%; height: auto; border-radius: 10px; margin-bottom: 20px;
   border: 1px solid var(--line);
 }
+
+/* Photo frame — used for all real photography on the site. A soft green
+   wash ties images from different sources to the brand palette, and a
+   consistent desaturation keeps them from fighting the type. */
+.photo-frame {
+  position: relative; overflow: hidden; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--green-pale);
+}
+.photo-frame img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(0.82) contrast(1.03);
+}
+.photo-frame::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(155deg, rgba(59,97,70,0.32) 0%, rgba(143,174,139,0.14) 55%, rgba(38,63,43,0.1) 100%);
+  mix-blend-mode: multiply;
+}
+.photo-frame--card { aspect-ratio: 8 / 5; margin-bottom: 20px; }
+.photo-frame--banner {
+  aspect-ratio: 16 / 6; width: 100%; margin-bottom: 40px; border-radius: 16px;
+}
+.hero-photo-wrap { margin-top: 48px; }
+.photo-frame--detail { aspect-ratio: 16 / 7; width: 100%; margin-bottom: 36px; border-radius: 16px; }
+@media (max-width: 720px) {
+  .photo-frame--banner, .photo-frame--detail { aspect-ratio: 4 / 3; }
+}
 .card {
   background: var(--white); border: 1px solid var(--line); border-radius: 14px;
   padding: 20px 20px 28px; display: flex; flex-direction: column;
@@ -454,9 +480,41 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
 }
 
 /* ============================================
-   RESPONSIVE
+   PRICING (Implementation page)
 ============================================ */
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.pricing-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 16px;
+  padding: 32px 28px; display: flex; flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.pricing-card:hover { border-color: var(--green); transform: translateY(-3px); }
+.pricing-card--featured { border-color: var(--green); border-width: 2px; position: relative; }
+.pricing-tier-tag {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--white); background: var(--green); display: inline-block;
+  padding: 5px 12px; border-radius: 100px; margin: -44px 0 16px;
+  align-self: flex-start;
+}
+.pricing-tier { font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-faint); margin: 0 0 10px; }
+.pricing-card--featured .pricing-tier { margin-top: 0; }
+.pricing-price { font-family: var(--font-display); font-size: 32px; font-weight: 600; color: var(--ink); margin: 0 0 14px; line-height: 1.1; }
+.pricing-price-unit { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--ink-faint); }
+.pricing-tagline { font-size: 15px; color: var(--ink-soft); margin: 0 0 24px; }
+.pricing-features { list-style: none; margin: 0 0 28px; padding: 0; flex-grow: 1; }
+.pricing-features li {
+  font-size: 14.5px; color: var(--ink-soft); padding-left: 24px; margin-bottom: 14px;
+  position: relative; line-height: 1.5;
+}
+.pricing-features li::before {
+  content: '✓'; position: absolute; left: 0; top: 0; color: var(--green); font-weight: 700;
+}
+.pricing-cta { width: 100%; text-align: center; justify-content: center; }
+.contact-form { flex-direction: column; max-width: 380px; margin: 0 auto; }
+.contact-form input { width: 100%; }
 @media (max-width: 860px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-tier-tag { margin-top: 0; }
   .card-grid, .resource-grid, .teaser-grid, .cadence-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .challenge { grid-template-columns: 1fr; text-align: left; }
@@ -469,6 +527,10 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--ink); }
   .stop-label { text-align: left; }
   .stop-label em { display: inline; margin-top: 0; margin-left: 4px; }
 }
+
+/* ============================================
+   RESPONSIVE
+============================================ */
 
 @media (max-width: 720px) {
   .main-nav { 

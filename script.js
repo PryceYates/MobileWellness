@@ -32,17 +32,84 @@ if (timeline) {
   }
 }
 
-// Email form — front-end only placeholder (no backend wired up yet)
+// Email form — posts to whatever backend is set in the form's action
+// attribute (see the HTML comment above the form on index.html)
 const ctaForm = document.getElementById('cta-form');
 const ctaNote = document.getElementById('cta-note');
 
 if (ctaForm) {
-  ctaForm.addEventListener('submit', (e) => {
+  ctaForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value.trim();
-    if (email) {
-      ctaNote.textContent = "You're on the list, first reset lands Monday.";
-      ctaForm.reset();
+    if (!email) return;
+
+    if (ctaForm.action.includes('YOUR_FORM_ID')) {
+      // Backend not configured yet — tell the developer, not the visitor.
+      ctaNote.textContent = "Signup isn't connected yet. See DEPLOY.md to set this up.";
+      console.warn('Momentum: the email form action still points at a placeholder Formspree ID. Update it in index.html to start collecting real signups.');
+      return;
+    }
+
+    const submitBtn = ctaForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    ctaNote.textContent = 'Signing up...';
+
+    try {
+      const res = await fetch(ctaForm.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(ctaForm),
+      });
+      if (res.ok) {
+        ctaNote.textContent = "You're on the list, first reset lands Monday.";
+        ctaForm.reset();
+      } else {
+        ctaNote.textContent = "Something went wrong, try again in a moment.";
+      }
+    } catch (err) {
+      ctaNote.textContent = "Something went wrong, try again in a moment.";
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
+
+// Contact form (Implementation page) — same pattern as the newsletter form
+const contactForm = document.getElementById('contact-form');
+const contactNote = document.getElementById('contact-note');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('contact-email').value.trim();
+    if (!email) return;
+
+    if (contactForm.action.includes('YOUR_FORM_ID')) {
+      contactNote.textContent = "This form isn't connected yet. See DEPLOY.md to set this up.";
+      console.warn('Momentum: the contact form action still points at a placeholder Formspree ID. Update it in implementation.html to start receiving real inquiries.');
+      return;
+    }
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    contactNote.textContent = 'Sending...';
+
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(contactForm),
+      });
+      if (res.ok) {
+        contactNote.textContent = "Thanks, we'll be in touch soon.";
+        contactForm.reset();
+      } else {
+        contactNote.textContent = "Something went wrong, try again in a moment.";
+      }
+    } catch (err) {
+      contactNote.textContent = "Something went wrong, try again in a moment.";
+    } finally {
+      submitBtn.disabled = false;
     }
   });
 }

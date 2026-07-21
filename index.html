@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Momentum: Movement frameworks for sedentary workdays</title>
 <meta name="description" content="Frameworks, challenges, and resources to help people in sedentary jobs build movement back into how they already work.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Momentum">
+<meta property="og:title" content="Momentum: Movement frameworks for sedentary workdays">
+<meta property="og:description" content="Frameworks, challenges, and resources to help people in sedentary jobs build movement back into how they already work.">
+<meta property="og:image" content="https://pryceyates.github.io/MobileWellness/og-image.png">
+<meta property="og:url" content="https://pryceyates.github.io/MobileWellness/index.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Momentum: Movement frameworks for sedentary workdays">
+<meta name="twitter:description" content="Frameworks, challenges, and resources to help people in sedentary jobs build movement back into how they already work.">
+<meta name="twitter:image" content="https://pryceyates.github.io/MobileWellness/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -22,7 +35,7 @@
       <a href="frameworks.html">Frameworks</a>
       <a href="challenges.html">Challenges</a>
       <a href="science.html">The Science</a>
-      <a href="#" class="nav-shop" target="_blank" rel="noopener">Shop ↗</a>
+      <a href="implementation.html" class="nav-shop">Implementation</a>
     </nav>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -43,6 +56,9 @@
         <a href="challenges.html" class="btn btn-primary">See this week's challenge</a>
         <a href="frameworks.html" class="btn btn-ghost">Browse the frameworks</a>
       </div>
+    </div>
+    <div class="wrap hero-photo-wrap">
+      <div class="photo-frame photo-frame--banner"><img src="https://images.unsplash.com/photo-1713947505684-25b9bf8d544f?w=1600&h=600&fit=crop&auto=format&q=75" alt="A person stretching at their desk during a work break"></div>
     </div>
   </section>
 
@@ -142,9 +158,10 @@
     <div class="wrap cta-inner">
       <h2 class="cta-title">One reset a week, sent to your inbox.</h2>
       <p class="cta-desc">A short framework or challenge, every Monday. No spam, unsubscribe anytime.</p>
-      <form class="cta-form" id="cta-form">
+      <!-- Replace YOUR_FORM_ID below with your real Formspree endpoint (see DEPLOY notes) -->
+      <form class="cta-form" id="cta-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <label for="email" class="sr-only">Email address</label>
-        <input type="email" id="email" placeholder="you@company.com" required>
+        <input type="email" id="email" name="email" placeholder="you@company.com" required>
         <button type="submit" class="btn btn-primary">Sign up</button>
       </form>
       <p class="cta-note" id="cta-note" role="status"></p>
@@ -168,7 +185,7 @@
       </div>
       <div class="footer-col">
         <p class="footer-col-title">Elsewhere</p>
-        <a href="#" target="_blank" rel="noopener">Our products ↗</a>
+        <a href="implementation.html">Implementation</a>
         <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
         <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
       </div>

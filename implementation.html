@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Implementation: Momentum</title>
+<meta name="description" content="Three ways to bring Momentum's frameworks and challenges into your company, from a free self-serve start to a fully outfitted rollout.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Momentum">
+<meta property="og:title" content="Implementation: Momentum">
+<meta property="og:description" content="Three ways to bring Momentum's frameworks and challenges into your company, from a free self-serve start to a fully outfitted rollout.">
+<meta property="og:image" content="https://pryceyates.github.io/MobileWellness/og-image.png">
+<meta property="og:url" content="https://pryceyates.github.io/MobileWellness/implementation.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Implementation: Momentum">
+<meta name="twitter:description" content="Three ways to bring Momentum's frameworks and challenges into your company, from a free self-serve start to a fully outfitted rollout.">
+<meta name="twitter:image" content="https://pryceyates.github.io/MobileWellness/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise-layer" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="science.html">The Science</a>
+      <a href="implementation.html" class="nav-active">Implementation</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Implementation</p>
+      <h1 class="page-hero-title">Bring Momentum to your company</h1>
+      <p class="page-hero-sub">Everything on this site is free to use on your own. These three packages exist for companies that want a faster, better-supported rollout — from a self-serve start to a fully outfitted one.</p>
+      <div class="photo-frame photo-frame--banner hero-photo-wrap"><img src="https://images.unsplash.com/photo-1758691736979-ff263c04b3d1?w=1600&h=600&fit=crop&auto=format&q=75" alt="Two coworkers talking in an office hallway"></div>
+    </div>
+  </section>
+
+  <!-- PRICING GRID -->
+  <section class="section">
+    <div class="wrap">
+      <div class="pricing-grid">
+
+        <article class="pricing-card">
+          <p class="pricing-tier">Free</p>
+          <p class="pricing-price">$0</p>
+          <p class="pricing-tagline">Everything you need to run this yourselves.</p>
+          <ul class="pricing-features">
+            <li>Full access to every framework, challenge, and study on this site</li>
+            <li>The daily/weekly/monthly challenge rotation, ready to run as-is</li>
+            <li>An online implementation playbook — how to introduce this to a team, assign people to groups, and keep it running past week one</li>
+          </ul>
+          <a href="frameworks.html" class="btn btn-ghost pricing-cta">Start free</a>
+        </article>
+
+        <article class="pricing-card pricing-card--featured">
+          <p class="pricing-tier-tag">Most common</p>
+          <p class="pricing-tier">Team</p>
+          <p class="pricing-price">$250–450 <span class="pricing-price-unit">per team</span></p>
+          <p class="pricing-tagline">A real kickoff, plus something physical to make it stick.</p>
+          <ul class="pricing-features">
+            <li>Everything in Free</li>
+            <li>A one-time live training session to launch the program with your team</li>
+            <li>A physical Momentum Chart for your team's space — the visible tracker the framework of the same name is built on</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary pricing-cta">Get in touch</a>
+        </article>
+
+        <article class="pricing-card">
+          <p class="pricing-tier">Complete</p>
+          <p class="pricing-price">Custom pricing</p>
+          <p class="pricing-tagline">For companies ready to outfit the whole team.</p>
+          <ul class="pricing-features">
+            <li>Everything in Team</li>
+            <li>A negotiated discount code with our standing desk converter supplier, for every employee</li>
+            <li>Custom-built challenges designed around your team's actual work, not a generic template</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost pricing-cta">Contact us</a>
+        </article>
+
+      </div>
+
+      <p class="section-note">Every tier is built on the same research as the rest of this site — none of these are add-ons that go beyond what the evidence actually supports. See <a href="science.html">The Science</a> for the reasoning behind the program itself.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-cta" id="contact">
+    <div class="wrap cta-inner">
+      <h2 class="cta-title">Ready to talk it through?</h2>
+      <p class="cta-desc">Tell us a little about your team and we'll follow up with next steps.</p>
+      <!-- Replace YOUR_FORM_ID below with your real Formspree endpoint (see DEPLOY.md) -->
+      <form class="cta-form contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="contact-email" class="sr-only">Work email</label>
+        <input type="email" id="contact-email" name="email" placeholder="you@company.com" required>
+        <label for="contact-team-size" class="sr-only">Team size</label>
+        <input type="text" id="contact-team-size" name="team_size" placeholder="Team size (optional)">
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+      <p class="cta-note" id="contact-note" role="status"></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Momentum<span class="logo-dot">.</span></a>
+      <p class="footer-tagline">"An object in motion<br>stays in motion."</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <p class="footer-col-title">Platform</p>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="science.html">The Science</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Elsewhere</p>
+        <a href="implementation.html">Implementation</a>
+        <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Momentum. Built for the eight hours you're sitting down.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
